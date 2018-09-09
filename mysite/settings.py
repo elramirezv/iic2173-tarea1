@@ -25,7 +25,7 @@ SECRET_KEY = '$guubrdizg31n%6eva&x7i4egt&j7nx*ssa_ci8#utsu2@17&@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['13.58.217.42']
+ALLOWED_HOSTS = ['18.222.31.181']
 
 
 # Application definition
@@ -80,10 +80,11 @@ DATABASES = {
         'NAME': 'django_db',
         'USER': 'alejandro',
         'PASSWORD': '12345',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'HOST': 'localhost',
+        'PORT': '',                      # Set to empty string for default.
     }
 }
+
 
 
 # Password validation
