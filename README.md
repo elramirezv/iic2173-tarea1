@@ -1,12 +1,12 @@
 # IIC2173 Tarea1 - Eleuterio Ramírez
 La aplicación se encuentra montada en: [http://18.220.43.0](http://18.220.43.0)
 
-| Tarea 1 |  |
-|-----------|------------------|
-|Servidor| AWS EC2 Ubuntu instance |
-| Framework | Django |
-| Database | PostgreSQL |
-| Proxy | NGINX + Gunicorn |
+| Tarea 1 |  |Detalles|
+|-----------|------------------|------------------|
+|Servidor| AWS EC2 Ubuntu instance | Tenía una cuenta de antes y aprendí a crear instancias |
+| Framework | Django | |
+| Database | PostgreSQL |La base de datos la instalé manualmente como decía el tutorial|
+| Proxy | NGINX + Gunicorn |La configuración fue hecha como en el tutorial|
 
 Los enlaces utilizados fueron:
   - [Amazon AWS](https://aws.amazon.com/es/)
