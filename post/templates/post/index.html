@@ -1,17 +1,37 @@
-<h1>Tarea 1 - IIC2173</h1>
-
-<form action="" method="post">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Enviar">
-</form>
-
-{% if latest_question_list %}
-    <ul>
-    {% for question in latest_question_list %}
-        <li>{{question.client_ip}}: {{question.question_text}}</li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tarea 1</title>
+  </head>
+  <body>
+    <h1>Tarea 1 - IIC2173</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Publcar">
+    </form>
+    <p>
+    <p>
+    <p>
+    {% if latest_question_list %}
+    <table style='width:50%'>
+      <caption><h3><b>Last Messages</b></h3></caption>
+      <tr style="text-align:left">
+        <th>IP Adress</th>
+        <th>Message</th>
+        <th>Date</th>
+      </tr>
+      {% for question in latest_question_list %}
+        <tr>
+          <td>{{question.client_ip}}</td>
+          <td>{{question.question_text}}</td>
+          <td>{{question.pub_date}}</td>
+        </tr>
+      {% endfor %}
+  {% else %}
+      <p>No messages are available.</p>
+  {% endif %}
+    </table>
+</body>
+</html>

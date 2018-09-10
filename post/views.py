@@ -16,7 +16,6 @@ def index(request):
         if form.is_valid():
             n_message = form.cleaned_data['message']
             date = timezone.now()
-
             form = createMessage(n_message,date)
     else:
         form = PostForm()
