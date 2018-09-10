@@ -1,0 +1,17 @@
+<h1>Tarea 1 - IIC2173</h1>
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Enviar">
+</form>
+
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li>{{question.client_ip}}: {{question.question_text}}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
